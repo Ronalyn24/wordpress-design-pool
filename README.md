@@ -9,33 +9,35 @@ Design Pool is a curated digital library of unique, trend-forward patterns desig
 
 # 🚀 Key Features
 
-PSD to SCSS/HTML Conversion: Converted designs into clean, maintainable code using SCSS and BEM methodology.
+**PSD to SCSS/HTML Conversion:** Converted designs into clean, maintainable code using SCSS and BEM methodology.
 
-WordPress Integration: Migrated the site to WordPress, creating custom templates for each page and implementing dynamic content with PHP.
+**WordPress Integration:** Migrated the site to WordPress, creating custom templates for each page and implementing dynamic content with PHP.
 
-Custom Post Types & ACF: Enabled easy content management with Custom Post Types and Advanced Custom Fields.
+**Custom Post Types & ACF:** Enabled easy content management with Custom Post Types and Advanced Custom Fields.
 
-WooCommerce Setup: Configured WooCommerce with custom product and single product templates, and set up payment gateways.
+**WooCommerce Setup:** Configured WooCommerce with custom product and single product templates, and set up payment gateways.
 
-Product Import: Imported products from live to dev environment using WP All Import.
+**Product Import:** Imported products from live to dev environment using WP All Import.
 
-Reusable Shortcodes: Developed shortcodes with WP loops and conditional logic, making dynamic cards reusable for products and posts.
+**Reusable Shortcodes:** Developed shortcodes with WP loops and conditional logic, making dynamic cards reusable for products and posts.
 
-Search & Filter Pro: Integrated advanced filtering for blog, product, and licensable design pages.
+**Search & Filter Pro:** Integrated advanced filtering for blog, product, and licensable design pages.
 
-Custom Popups: Built a custom popup template with JavaScript for added interactivity.
+**Custom Popups:** Built a custom popup template with JavaScript for added interactivity.
 
-Flickity Slider: Implemented smooth, touch-friendly sliders using the Flickity plugin.
+**Flickity Slider:** Implemented smooth, touch-friendly sliders using the Flickity plugin.
 
-JavaScript Enhancements: Added various JavaScript functionalities to improve UX.
+**JavaScript Enhancements:** Added various JavaScript functionalities to improve UX.
 
-Responsive Images: Ensured all images are optimized and responsive.
+**Responsive Images:** Ensured all images are optimized and responsive.
 
-Contact Form: Integrated Gravity Forms for a seamless contact experience.
+**Contact Form:** Integrated Gravity Forms for a seamless contact experience.
 
-SEO Optimization: Implemented SEO best practices using Yoast SEO.
+**Web Accessibility:** Enhanced accessibility by following best practices, ensuring compatibility with screen readers and providing proper contrast, keyboard navigation, and ARIA attributes.
 
-Performance: Optimized the website to meet Google PageSpeed standards.
+**SEO Optimization:** Implemented SEO best practices using Yoast SEO.
+
+**Performance:** Optimized the website to meet Google PageSpeed standards.
 
 # 📦 Tech Stack
 
