@@ -1,0 +1,21 @@
+.aw-search-page {
+  
+  .results-no {
+    display: none;
+  }
+
+  .results-yes {
+      display: block;
+  }
+
+  &.search-0 {
+    
+      .results-no {
+          display: block;
+      }
+
+      .results-yes {
+          display: none;
+      }
+  }
+}

@@ -1,0 +1,648 @@
+/**********************************************
+** AW - ARCHIVE DOWNLOAD
+***********************************************/
+
+/*** Hide All Access Pass from grid ***/
+#edd_download_61205,
+#edd_download_69294 {
+  display: none !important;
+}
+
+.post-type-archive-download .row.main-content-wrap {
+    max-width: 100% !important;
+}
+.post-type-archive-download .porto-blog-sidebar {
+    display: none;
+}
+.post-type-archive-download .main-content,
+.tax-download_tag .row.main-content-wrap,
+.post-type-archive-download .main-content.col-lg-9 {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 0 75px !important;
+    margin: 0 auto;
+    flex: 0 0 100% !important;
+}
+
+/*--- Search filters ---*/
+
+.post-type-archive-download #site-content {
+  .searchandfilter h4 {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .searchandfilter ul li li {
+    
+    @include responsive(tablet-portrait){
+        display: block;
+        position: relative;
+    }
+    
+    input {
+        cursor: pointer;
+        position: relative;
+        top: 1px;
+    }
+  }
+
+  .searchandfilter li[data-sf-field-input-type=checkbox] label {
+      font-size: 14px;
+      padding-left: 4px;
+  }
+
+  .searchandfilter .sf-count {
+      position: absolute;
+      right: 20px;
+      
+    @include responsive(tablet-portrait){
+      right: 5px;
+    }
+  }
+
+  .searchandfilter > ul > li {
+      padding: 12px;
+      border-bottom: 1px solid #e7e7e7;
+      border-left: 1px solid #e7e7e7;
+      border-right: 1px solid #e7e7e7;
+  }
+
+  .searchandfilter > ul > li:first-of-type {
+      border-top: 1px solid #e7e7e7;
+  }
+
+  .aw-down-container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 4rem 2rem;
+  }
+
+  .aw-down-container .searchandfilter {
+    width: 100% !important;
+    padding-right: 0 !important;
+  }
+  
+  .sf-field-reset a {
+    border: 1px solid $color-violet;
+    background-color: $color-violet;
+    color: $color-white;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 9px 20px;
+    transition: all 0.2s ease-in;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+}
+
+.post-type-archive-download .aw-woo-wrap__sidebar {
+    border: none !important;
+}
+
+/*--- Archive ---*/
+
+.mapping-main-content {
+    width: 100%;
+    padding: 0 2rem;
+    
+    @include responsive(phone-portrait){
+        padding: 0 20px;
+    }
+}
+
+.post-type-archive-download {
+    
+    .aw-banner__breadcrumslist {
+        
+        @include responsive(phone-landscape){
+            display: none;
+        }
+    }
+    
+  #main-archive-downloads {
+    position: relative;
+    width: 100%;
+  }
+
+  #main-archive-downloads .sfp-scroll-top {
+      position: absolute;
+      top: -100px;
+  }
+
+  .aw-down-container .edd_downloads_list {
+      width: 100%;
+  }
+
+  .aw-down-container .searchandfilter ul {
+      padding: 0;
+  }
+
+  .aw-down-container #edd_download_pagination {
+      width: 100%;
+      max-width: 100%;
+      text-align: right;
+      margin-top: 2rem;
+      padding: 35px 0 0;
+      border-top: 1px solid #e7e7e7;
+  }
+
+  .aw-down-container .page-numbers {
+      font-size: 18px;
+      color: #706f6c;
+      border: 1px solid #706f6c;
+      padding: 5px 13px;
+      
+    @include responsive(phone-portrait){
+        font-size: 17px;
+        padding: 5px 10px;
+    }
+  }
+
+  .aw-down-container .page-numbers.current {
+      font-weight: bold;
+      border-color: #29363c;
+  }
+
+  .aw-down-container .edd_download_title {
+      color: #2b2b2d;
+      font-family: 'Raleway';
+      font-size: 15px;
+      font-weight: 500;
+      text-align: center;
+      line-height: 1.35;
+      letter-spacing: -.01em;
+      margin: 20px 0 15px;
+  }
+
+  .aw-down-container .product-buttons {
+      text-align: center;
+  }
+
+  .custom-edd-button .edd_purchase_submit_wrapper {
+      text-align: center;
+  }
+
+  .custom-edd-button .edd-submit.button.blue {
+      font-size: .75rem;
+      font-weight: 600;
+      color: #6f6e6c;
+      background: #fff;
+      border: 1px solid #dce3e6;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border-radius: 0;
+      transition: .25s ease-in-out;
+  }
+
+  .custom-edd-button .edd-submit.button.blue:hover {
+      background: #29363c;
+      border-color: #29363c;
+      color: #fff;
+      padding: 8px 40px 8px 15px;
+  }
+
+  .download-read-more,
+  .custom-edd-button .edd-all-access-btn {
+      position: relative;
+      font-size: .75rem;
+      font-weight: 600;
+      border: 1px solid #dce3e6;
+      color: #6f6e6c;
+      padding: 8px 18px;
+      display: inline-block;
+      -webkit-transition: .25s ease-in-out;
+      -moz-transition: .25s ease-in-out;
+      -o-transition: .25s ease-in-out;
+      transition: .25s ease-in-out;
+  }
+
+  .download-read-more:before,
+  .custom-edd-button .edd-submit.button.blue:before {
+      content: "\f061";
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      position: absolute;
+      color: #fff;
+      right: 30px;
+      opacity: 0;
+  }
+
+  .download-read-more:hover:before,
+  .custom-edd-button .edd-submit.button.blue:hover:before {
+      right: 18px;
+      opacity: 1;
+  }
+
+  .download-read-more:hover {
+      background-color: #29363c;
+      border-color: #29363c;
+      padding: 8px 40px 8px 15px;
+  }
+
+  .download-read-more:hover,
+  .download-read-more:before {
+      color: #ffffff;
+  }
+
+  .aw-down-container a:hover {
+      text-decoration: none;
+  }
+
+  .aw-down-container li.sf-field-taxonomy-download_tag, 
+  .aw-down-container li.sf-field-taxonomy-download_category {
+    border: 1px solid #e7e7e7;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 20px;
+    border-top: none;
+    
+    @include responsive(phone-portrait){
+        padding: 20px 10px; 
+    }
+  }
+
+  .aw-down-container .searchandfilter ul > li.sf-field-taxonomy-download_category:first-child {
+      border-top: 1px solid #e7e7e7 !important;
+  }
+
+  .aw-col-ctner {
+      display: flex;
+  }
+  .aw-col-of-2 {
+      flex: 0 0 50%;
+  }
+}
+
+
+/**********************************************
+** ARCHIVE DOWNLOADS - BANNER
+***********************************************/
+
+.post-type-archive-download {
+    
+  .aw-banner-container {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    padding: 0 2rem;
+    
+    @include responsive(phone-landscape){
+        padding: 2rem 0 0;
+    }
+    
+    .lists-unorder {
+        padding-left: 1rem;
+    }
+  }
+
+  
+  .aw-download-row {
+    max-width: 930px;
+    margin: 0 auto;
+    padding: 0 0 2rem;
+      
+    .wp-container-1.wp-block-column {
+        padding: 0;
+    }
+    
+    &.row-second {
+      padding: 0 0 3rem;
+    }
+  
+    p, .aw-download-row li {
+        font-size: 16px;
+    }
+  
+    h3 {
+        padding: 10px 0;
+    }
+  
+    .aw-button-container h4 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    
+    .aw-already-subscribe a {
+      color: #524360;
+    }
+  
+    .wp-block-image {
+        margin: 0 0 2em;
+    }
+  
+    ul {
+        padding-left: 17px;
+    }
+    
+    ul li {
+      line-height: 28px;
+    }
+  
+    .wp-block-button__link {
+        color: #fff !important;
+      border-radius: 5px;
+    }
+  
+    .wp-block-button__link:hover {
+        background-color: #29363c !important;
+        border-color: #29363c !important;
+    }
+  
+    .aw-button-container {
+        max-width: 380px;
+        margin: 0 auto;
+    }
+}
+
+  
+  
+  .aw-button-container {
+    
+    .aw-inner-column {
+        
+        h4 {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+        
+        p:first-of-type {
+            display: block;
+            font-size: 15px;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+        
+        p:nth-child(3) {
+            display: none;
+        }
+    }
+  }
+
+  .aw-banner-container .edd_purchase_submit_wrapper {
+      text-align: center;
+  }
+
+  .edd-student-btn, .edd-pro-btn {
+      background-color: $color-violet !important;;
+      padding: 12px 24px;
+      border-radius: 6px;
+  }
+
+  .aw-banner-container .edd-submit.button.blue {
+    background-color: $color-violet !important;;
+    border-color: $color-violet !important;;
+    padding: 12px 24px !important;
+    border-radius: 40px !important;
+  }
+
+  .aw-already-subscribe {
+      margin-top: 1.2rem;
+  }
+
+  .aap-holder-msg {
+      display: none;
+      width: 100%;
+  }
+
+  .aap-holder-msg p {
+      margin-bottom: 0;
+  }
+
+  .aap-holder-msg p:last-of-type {
+      margin-bottom: 2rem;
+  }
+  
+  .aap-holder-msg p a {
+    
+    font-size: inherit !important;
+  }
+
+  .aw-spinner img {
+      display: none;
+      width: 60px;
+      margin: 0 auto;
+  }
+
+  .aw-spinner.aac-btn-clicked img {
+      display: block;
+  }
+}
+
+
+.subsPrices {
+    
+    @include responsive(phone-portrait){
+        flex-direction: column;
+    }
+    
+    &__item {
+        
+        &:not(:last-child) {
+            
+            @include responsive(phone-portrait){
+                margin-bottom: 25px;
+            }
+        }
+        
+        h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        
+        p {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+/*--- Animate - not a subscriber ---*/
+
+.callout-animation {
+    padding: 14px 22px;
+    background-color: #fffbcd;
+    border: 2px solid #eade85;
+    border-radius: 20px;
+    -webkit-animation-name: shakeX;
+    animation-name: shakeX;
+    animation-delay: 1.5s;
+    -webkit-animation-duration: 1.3s;
+    animation-duration: 1.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes shakeX {
+    from,
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+ }
+
+@keyframes shakeX {
+    from,
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+/*--- AA PASS HOLDERS ---*/
+
+.aap-holder-banner {
+    display: none;
+}
+
+.aap-holder .aap-holder-msg {
+    display: block !important;
+}
+
+.aap-holder-extra {
+    margin-top: 1rem;
+}
+
+.aap-holder-extra span:first-of-type {
+    margin-right: 1.5rem;
+}
+
+/**********************************************
+** DOWNLOADS - CHECKOUT
+***********************************************/
+
+#edd_checkout_form_wrap #edd_checkout_user_info,
+#edd_checkout_form_wrap #edd_register_fields {
+    background-color: #fafafa;
+}
+
+#edd_checkout_form_wrap .edd-dp-terms {
+    position: relative;
+}
+
+#edd_checkout_form_wrap .edd-dp-terms label {
+    position: absolute;
+    left: 23px;
+    top: 3px;
+}
+
+#edd_checkout_form_wrap .edd-dp-terms ul {
+    padding: 0;
+}
+
+#edd_checkout_form_wrap .agree_to_terms a,
+#edd_checkout_form_wrap .agree_to_privacy a {
+    font-size: 95%;
+    font-weight: 700;
+    border-bottom: 1px solid #c2b2ce !important;
+}
+
+#edd_checkout_form_wrap #edd_mailchimp {
+    padding: 0px 0 17px 21px;
+}
+
+#edd_checkout_form_wrap input[type=email], #edd_checkout_form_wrap input[type=password], #edd_checkout_form_wrap input[type=tel], #edd_checkout_form_wrap input[type=text], #edd_checkout_form_wrap textarea {
+    padding: 13px 16px;
+}
+
+#edd-paypal-container {
+    max-width: 300px;
+}
+
+#edd_checkout_form_wrap #edd-login-account-wrap {
+    margin: 0 0 1.3rem 0;
+}
+
+/**********************************************
+** AW - RESPONSIVE
+***********************************************/
+@media only screen and (max-width: 1360px) {
+    .aw-down-container .searchandfilter {
+        width: 25%;
+    }
+
+    #main-archive-downloads {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .aw-down-container .searchandfilter,
+    #main-archive-downloads {
+        width: 100% !important;
+        padding-right: 0 !important;
+    }
+    
+    .post-type-archive-download .aw-down-container {
+        padding: 4rem 2rem;
+    }
+
+    .aw-down-container .edd_downloads_list {
+        width: 100%;
+        padding: 25px 0 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        grid-column-gap: 15px;
+		grid-row-gap: 10px;
+    }
+
+    .aw-down-container .edd_downloads_list .edd_download {
+        width: 47%;
+    }
+    
+    .aw-down-container #edd_download_pagination {
+        padding: 64px 0 20px;
+        text-align: center;
+    }
+}
+
+
+@media only screen and (max-width: 479px) {
+    .post-type-archive-download .aw-down-container {
+        padding: 3rem 20px 2rem !important;
+    }
+    
+    .post-type-archive-download .aw-down-container #edd_download_pagination {
+		text-align: center !important;
+	}
+}

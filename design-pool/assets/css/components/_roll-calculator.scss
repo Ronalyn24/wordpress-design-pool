@@ -1,0 +1,143 @@
+#roll-calculator {
+  display: none;
+  border: 1px solid #dcdcdc;
+  padding: 30px;
+  border-radius: 4px;
+  background-color: #f6f6f6;
+
+  .product_cat-wallpaper & {
+    display: block;
+  }
+
+  h2 {
+    @include product-label;
+  }
+}
+
+.aw-roll-calculator {
+    width: 100%;
+    max-width: 670px;
+    margin: 0 auto;
+  
+  &__lists {
+    margin-bottom: 20px;
+    
+    li {
+      position: relative;
+      padding-left: 20px;
+      
+      &::before {
+        @include list-disc-product;
+      }
+    }
+  }
+  
+  &__square {
+    
+    p {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+  }
+
+  .sign {
+    font-size: 25px;
+    position: relative;
+    top: -14px;
+    padding: 15px;
+    font-weight: 300;
+    color: #000;
+    line-height: 0;
+
+    .sign-l {
+      font-size: 37px;
+    }
+  }
+}
+
+.area-feet {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  
+  &__item {
+    text-align: center;
+    
+    label {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .sign-l {
+    font-size: 32px;
+  }
+}
+
+.area-size {
+  display: flex;
+
+  &__item {
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    label {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__positioner {
+    position: relative;
+    border: 1px solid #c4c4c4;
+    border-radius: 4px;
+    background-color: #fff;
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .sign {
+    top: 14px;
+    font-size: 20px;
+  }
+}
+
+#area-feet-result,
+.area-feet__item input,
+.area-size__item input {
+  padding: 10px 10px;
+  text-align: center;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  font-size: 14px;
+  background-color: #fff;
+  height: 60px;
+  line-height: 33px;
+  width: 100%;
+}
+
+
+.message-alert {
+  padding: 20px;
+  font-size: 16px !important;
+  background: #ffd1d1;
+  border: 1px solid #c00e0e;
+  border-radius: 10px;
+  color: #970000;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+#size-of-roll {
+  color: #fff;
+
+  &.show {
+    color: inherit;
+  }
+}

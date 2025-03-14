@@ -1,0 +1,80 @@
+.aw-btn-ctner {
+  padding: 1rem 0 0;
+  
+  @include responsive(phone-medium){
+    padding: 0;
+  }
+  
+  &__col-2 {
+    padding: 0;
+    
+    .gen-btn__large {
+      width: 45%;
+      margin: 0 10px;
+      padding: 0.7rem 10px;
+      
+      @include responsive(phone-landscape){
+        width: 100%;
+        max-width: 270px;
+        margin: 0 5px 13px;
+      }
+    }
+  }
+  
+  &--2col {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 1rem;
+    
+    @include responsive(phone-portrait){
+      flex-direction: column;
+    }
+    
+    .gen-btn {
+      width: 47%;
+      
+      @include responsive(phone-portrait){
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  }
+}
+
+.gen-btn {
+  padding: 0.6rem 1.6rem;
+  border-radius: 40px !important;
+  display: inline-block;
+  text-align: center;
+  @include transition(.3s ease-in-out);
+  cursor: pointer;
+  
+  &.three-wider {
+    padding: 0.6rem 3rem;
+  }
+  
+  &__large {
+    font-size: 20px;
+    padding: 0.7rem 7%;
+    
+    @include responsive(phone-landscape){
+      font-size: 18px;
+    }
+    
+    @include responsive(phone-portrait){
+      font-size: 15px;
+      padding: 0.5rem 2rem;
+    }
+  }
+  
+  &__violet {
+    background-color: $color-violet !important;
+    color: $color-white;
+    
+    &:hover {
+      background-color: $color-black !important;
+      color: $color-white;
+    }
+  }
+}

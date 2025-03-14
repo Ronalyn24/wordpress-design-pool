@@ -1,0 +1,95 @@
+
+.aw-priv-content {
+  
+  &__item {
+    padding-bottom: 1rem;
+    
+    .aw-headline {
+      margin-bottom: 15px;
+      font-weight: 600;
+      font-size: 21px;
+      
+      &__head-three {
+        font-weight: 500;
+      }
+    }
+    
+    a {
+      font-weight: 500;
+    }
+    
+    p {
+      font-size: 17px;
+      line-height: 33px;
+      
+      @include responsive(phone-portrait){
+        font-size: 16px;
+        line-height: 30px;
+      }
+    }
+    
+    ul {
+      li {
+        position: relative;
+        padding-left: 25px;
+        
+        &:before {
+          content: "";
+          width: 10px;
+          height: 10px;
+          background: #544163;
+          position: absolute;
+          left: 0;
+          border-radius: 50%;
+          top: 11px;
+        }
+      }
+    }
+  }
+  
+  &__list {
+    font-size: 17px;
+    line-height: 33px;
+    margin-bottom: 20px;
+    padding-left: 25px;
+    
+    @include responsive(phone-portrait){
+      padding-left: 10px;
+    }
+    
+    li {
+      padding-left: 10px;
+      
+      &::marker {
+        font-weight: 600;
+        color: $color-black;
+      }
+    }
+    
+    &.lower-alpha {
+      list-style: lower-alpha;
+      padding-left: 35px;
+      
+      @include responsive(phone-portrait){
+        padding-left: 30px;
+      }
+    }
+    
+    &.numbers {
+      list-style: auto;
+      padding-left: 25px;
+      
+      @include responsive(phone-portrait){
+        padding-left: 15px;
+      }
+      
+      li {
+        padding-left: 0;
+        
+        &::marker {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

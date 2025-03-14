@@ -1,0 +1,96 @@
+
+$asset-base-path: '..' !default;
+
+@function asset($type, $file) {
+  @return url($asset-base-path + '/' + $type + '/' + $file);
+}
+
+@function image($file) {
+  @return asset('images', $file);
+}
+
+@function font($file) {
+  @return asset('fonts', $file);
+}
+
+
+$select-down-arrow: url('/wp-content/uploads/2023/05/drop-down-triangle-edited1.png');
+
+$select-down-arrow-grey: url('/wp-content/uploads/2024/04/drop-down-triangle-grey.png');
+
+
+
+// font Family
+$default-font-family: 'Open Sans', sans-serif;
+
+
+// Brand default
+
+$arsenal-family: 'Arsenal', sans-serif;
+$raleway-family: 'Raleway',sans-serif;
+$rollete-family: 'rollete_qakuregular';
+
+// Colors
+
+$color-black: #141a1f;
+
+$color-light-black: #252525;
+$color-light-black-1: #29363c;
+
+// OLD $color-light-black-1: #414042;
+
+
+$color-grey: #a8a8a8;
+
+$color-dark-grey: #707070; // body - passed on the web accesibility
+// $color-dark-grey: #777777; // the text look lighter
+
+$color-dark-grey-1: #666666;
+
+$color-dark-grey-2: #615d5a;
+
+$color-light-grey: #f4f4f5;
+
+$color-light-grey-1: rgba(0,0,0,0.25);
+
+$color-light-grey-2: #e7e7e7;
+
+$color-light-grey-3: #b4b4b4;
+
+$color-white: #ffffff;
+
+$color-white-1: #dbdad8;
+
+$color-violet: #544163;
+
+$color-light-violet:#c2b2ce;
+
+$color-light-violet-1:#8d889e;
+
+$color-dark-violet: #32263a;
+
+$color-orange-red: #ec5c41;
+$color-orange-red-2: #ee4237;
+
+// Alert box yellow
+$color-dark-yellow: #eade85;
+$color-lighter-yellow: #fffbcd;
+
+// Alert box green
+$color-dark-green: #b8db9f;
+$color-lighter-green: #e6fce2;
+
+// font Sizes
+
+$default-font-size: 16px;
+
+
+// grid
+
+$default-width: 100%;
+$default-max-width: 1400px;
+
+
+// horixontal spacing
+
+$spacing-horizontal: 3rem;

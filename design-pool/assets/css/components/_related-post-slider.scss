@@ -1,0 +1,88 @@
+.aw-related-post {
+  margin-left: -13px;
+  
+  @include responsive(phone-landscape){
+    margin-left: 0;
+  }
+
+  .carousel-cell {
+    width: 50%;
+    
+    @include responsive(phone-landscape){
+      width: 100%;
+    }
+  }
+  
+  .flickity-page-dots {
+    
+    .dot {
+      border: 2px solid $color-black;
+      background: $color-white;
+      opacity: 1;
+      width: 15px;
+      height: 15px;
+      
+      &.is-selected {
+        background: $color-black !important;
+      }
+    }
+  }
+}
+
+
+.default-ig-wrap {
+  
+  i {
+    font-size: 13rem;
+  }
+}
+
+.card-item {
+  
+  &__inner-ctner {
+    padding: 0 13px 25px;
+    overflow: hidden;
+    
+    @include responsive(phone-landscape){
+      padding: 0 0 20px;
+    }
+  }
+  
+  &__thumbnail {
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 45%;
+    
+    img {
+      @include object-fit-cover-center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+  
+  .meta-date {
+    font-size: 15px;
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+  
+  &__content {
+    
+    .aw-read-more {
+      font-weight: 700;
+      font-size: 13px;
+      color: $color-light-black-1;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      
+      i {
+        font-size: 15px;
+        margin: 0 0 0 10px;
+        position: relative;
+      }
+    }
+  }
+}

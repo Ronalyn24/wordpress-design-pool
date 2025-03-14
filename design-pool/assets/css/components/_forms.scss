@@ -1,0 +1,95 @@
+.aw-form {
+  
+  @include responsive(phone-landscape){
+    padding-top: 0;
+  }
+  
+  form {
+    position: relative;
+    width: 100%;
+    left: 0;
+    background-color: #f1f1f1;
+    padding: 4rem 8% 3rem;
+    border-radius: 15px;
+    box-shadow: 13px 13px 26px #dbdbdb, -13px -13px 26px #fff;
+  
+    @include responsive(phone-portrait){
+      padding: 3rem 6% 3rem;
+    }
+  }
+  
+  input,
+  select,
+  .textarea {
+    border: none;
+    border-radius: 5px;
+    padding: 15px 17px !important;
+    font-size: 18px !important;
+    line-height: inherit !important;
+    
+    @include responsive(phone-portrait){
+      padding: 11px 15px !important;
+      font-size: 15px !important;
+    }
+  }
+  
+  input {
+    height: auto;
+  }
+  
+  .gfield {
+    margin-bottom: 5px;
+  }
+  
+  .gfield_select {
+    color: $color-dark-grey;
+  }
+  
+  .gfield--type-email {
+    margin-top: 1rem;
+  }
+  
+  .gfield_select {
+    margin-bottom: 1rem !important;
+    background: $color-white url('/wp-content/uploads/2023/04/drop-down-triangle-edited1.png') 96% 49%/18px 18px no-repeat !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+
+    option {
+      background: #e2e3e5;
+      color: $color-black;
+    }
+  }
+  
+  .gform_footer {
+    @include justify-end;
+    
+    input[type="submit"] {
+      background-color: $color-violet;
+      color: $color-white;
+      border-radius: 50px;
+      font-weight: 600;
+      letter-spacing: .5px;
+      padding: 10px 2rem 12px !important;
+      cursor: pointer;
+      line-height: initial !important;
+      min-height: auto;
+    }
+  }
+}
+
+
+.gform_confirmation_wrapper {
+  @include alert();
+  @include alert-green();
+  margin-bottom: 1.5rem;
+}
+
+.gform_confirmation_message {
+  p {
+    margin-bottom: 0;
+  }
+}

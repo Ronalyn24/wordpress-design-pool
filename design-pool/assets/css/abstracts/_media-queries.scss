@@ -1,0 +1,45 @@
+
+@mixin responsive ($breakpoint){
+    @if $breakpoint == phone-small {
+        @media only screen and (max-width: 330px){ @content };
+    }
+    @if $breakpoint == phone-medium {
+        @media only screen and (max-width: 390px){ @content };
+    }
+    @if $breakpoint == xs-phone-portrait {
+        @media only screen and (max-width: 425px){ @content };
+    }
+    @if $breakpoint == phone-portrait {
+        @media only screen and (max-width: 479px){ @content };
+    }
+    @if $breakpoint == small-phone-landscape {
+        @media only screen and (max-width: 600px){ @content };
+    }
+    @if $breakpoint == phone-landscape {
+        @media only screen and (max-width: 768px){ @content };
+    }
+    @if $breakpoint == tablet-portrait {
+        @media only screen and (max-width: 980px){ @content };
+    }
+    @if $breakpoint == tablet-landscape {
+        @media only screen and (max-width: 1024px){ @content };
+    }
+    @if $breakpoint == very-small-desktop {
+        @media only screen and (max-width: 1175px){ @content };
+    }
+    @if $breakpoint == small-desktop {
+        @media only screen and (max-width: 1280px){ @content };
+    }
+    @if $breakpoint == desktop {
+        @media only screen and (max-width: 1366px){ @content };
+    }
+    @if $breakpoint == med-desktop {
+        @media only screen and (max-width: 1440px){ @content };
+    }
+    @if $breakpoint == x-med-desktop {
+        @media only screen and (max-width: 1680px){ @content };
+    }
+    @if $breakpoint == x-large-desktop {
+        @media only screen and (max-width: 1920px){ @content };
+    }
+}

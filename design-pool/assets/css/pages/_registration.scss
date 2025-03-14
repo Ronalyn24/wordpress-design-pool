@@ -1,0 +1,123 @@
+
+.aw-reg-form {
+  background-color: #f5f5f5;
+  margin-bottom: 3rem !important;
+  
+  @include responsive(phone-landscape){
+    padding: 45px 2rem;
+  }
+  
+  @include responsive(phone-portrait){
+    padding: 45px 20px;
+  }
+  
+  &__login a {
+    @include anchor-violet-border;
+  }
+  
+  .gform_anchor {
+    display: none;
+  }
+  
+  .gform_wrapper {
+    
+    label.gfield_label, 
+    .gform-field-label {
+      font-size: 15px !important;
+      font-weight: 500 !important;
+      color: $color-black;
+      
+      a {
+        @include anchor-violet-border;
+      }
+    }
+    
+    &.gravity-theme {
+      
+      .gform_fields {
+        grid-row-gap: 0;
+        grid-column-gap: 4%;
+      }
+      
+      .ginput_complex {
+        margin-bottom: 15px;
+        
+        &:not(.ginput_container_address) span:not([style*="display:none"]):not(.ginput_full) {
+          padding-right: 3%;
+        }
+      }
+      
+      .password_input_container {
+        padding-right: 0 !important;
+      }
+    }
+  }
+  
+  .gform_required_legend {
+    display: none;
+  }
+  
+  .gfield {
+    margin-bottom: 15px;
+    
+    &.gfield--type-username input {
+      width: 100% !important;
+    }
+    
+    input, select, textarea {
+      background-color: $color-white;
+      font-size: 18px !important;
+      color: $color-violet;
+      font-weight: 400 !important;
+      border: 1px solid rgba(0, 0, 0, 0.09);
+    }
+    
+    input, select {
+      height: 45px;
+    }
+  }
+  
+  input[type="submit"] {
+    background-color: $color-violet;
+    color: $color-white;
+    padding: 0.7rem 1.7rem;
+    border-radius: 40px;
+    display: inline-block;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    line-height: initial !important;
+    position: relative;
+    border: none;
+    
+    &:hover {
+      background-color: $color-black;
+      color: $color-white;
+    }
+  }
+  
+  .gfield_checkbox {
+    
+    .gchoice {
+      display: flex;
+      align-items: start;
+      margin-bottom: 10px;
+      
+      input {
+        height: auto;
+        margin-right: 15px;
+        margin-top: 7px;
+      }
+    }
+    
+    #label_15_10_1 strong {
+      display: block;
+    }
+  }
+}
+
+.aw-registration-page {
+  .reg-notice {
+    padding-bottom: 25px;
+  }
+}

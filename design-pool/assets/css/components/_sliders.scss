@@ -1,0 +1,79 @@
+.invisible-collection {
+  margin-bottom: 2rem !important;
+}
+
+
+.invisible-collection,
+.cryptology-collection {
+  position: relative !important;
+  
+  .aw-headline {
+    margin-bottom: 10px;
+    
+    @include responsive(phone-landscape){
+      padding: 0 35px;
+    }
+  }
+  
+  .sliderArrows {
+    display: none;
+    justify-content: flex-end;
+    position: absolute;
+    top: -1px;
+    right: -5px;
+    z-index: 9999;
+    
+    @include responsive(phone-landscape){
+      display: flex;
+    }
+    
+    .button {
+      background: transparent;
+      border: transparent;
+      width: 25px;
+      height: 30px;
+      
+      @include responsive(phone-portrait){
+        width: 20px;
+      }
+      
+      &--previous {
+        margin-right: 5px;
+      }
+      
+      i {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.aw-licensable-items.invisible-carousel,
+.aw-licensable-items.cryptology-carousel {
+  
+  .aw-licensable-items__item {
+    margin-right: 15px !important;
+    
+    @include responsive(phone-landscape){
+      width: 50%;
+      margin-right: 15px !important;
+    }
+    
+    .post-thumbnail {
+      padding-top: 85%;
+      
+      @include responsive(small-phone-landscape){
+        padding-top: 70%;
+      }
+    }
+    
+    &:nth-child(2n),
+    &:not(:nth-child(4n)) {
+      margin-right: 15px !important;
+      
+      @include responsive(phone-landscape){
+        margin-right: 15px !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.woocommerce form .form-row input.input-text {
+    height: 50px;
+}
+
+.woocommerce #payment #place_order, .woocommerce-page #payment #place_order, #add_payment_method .wc-proceed-to-checkout a.checkout-button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-checkout .wc-proceed-to-checkout a.checkout-button {
+    border-radius: 30px;
+}
+
+#dp_returns_container {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+
+    .checkout-did-load & {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+    }
+}

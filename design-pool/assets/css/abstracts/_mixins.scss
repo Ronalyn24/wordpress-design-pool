@@ -1,0 +1,232 @@
+/*--- FLEX CONTAINERS ---*/
+
+@mixin flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin flex-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@mixin justify-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@mixin justify-space-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@mixin justify-space-around {
+  -webkit-box-pack: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+@mixin justify-start {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+@mixin justify-end {
+  justify-content: flex-end;
+}
+
+@mixin align-items-center {
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+@mixin align-items-end {
+  align-items: flex-end;
+}
+
+@mixin align-items-start {
+  -ms-flex-align: start;
+  -webkit-box-align: start;
+  align-items: flex-start;
+}
+
+@mixin align-content-center {
+  -ms-flex-line-pack: center;
+  -ms-align-content: center;
+  align-content: center;
+}
+
+@mixin align-content-start {
+  -ms-flex-line-pack: start;
+  -ms-align-content: start;
+  align-content: flex-start;
+}
+
+@mixin align-content-between {
+  -ms-flex-line-pack: justify;
+  -ms-align-content: justify;
+  align-content: space-between;
+}
+
+@mixin align-content-end {
+  align-content: flex-end;
+}
+
+// RotateS, scaleY, translateY 
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+// EXAMPLE
+// .box { 
+//   @include transform(rotate(315deg));
+// }
+
+
+@mixin transition($property) {
+  -webkit-transition: $property;
+  -moz-transition: $property;
+  -o-transition: $property;
+  transition: $property;
+}
+
+// EXAMPLE
+// .box { 
+//   @include transition(.5s ease-in-out);
+// }
+
+
+
+@mixin element-absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+@mixin object-fit-cover-center {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin angle-up {
+  content: "\f107";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 900;
+  position: absolute;
+}
+
+// Animations
+
+@mixin fade-in {
+  opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+@mixin show-lightbox {
+  position: fixed;
+  @include flex;
+  flex-direction: column;
+  opacity: 1;
+  visibility: visible;
+  @include transition( all 0.2s ease-in);
+}
+
+@mixin popup-text {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+@mixin anchor-violet-border {
+  color: $color-violet;
+  border-bottom: 2px solid $color-light-violet;
+  font-weight: 600;
+}
+
+@mixin default-button {
+  padding: 0.6rem 1.6rem;
+  border-radius: 40px !important;
+  display: inline-block;
+  text-align: center;
+  @include transition(.3s ease-in-out);
+  cursor: pointer;
+}
+
+@mixin shop-button {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 20px;
+  border-radius: 40px !important;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #544163;
+    color: #ffffff;
+  }
+}
+
+// Alerts
+
+@mixin alert {
+  padding: 14px 22px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #353b40;
+}
+
+@mixin alert-yellow {
+  background-color: $color-lighter-yellow;
+  border: 2px solid $color-dark-yellow;
+}
+
+@mixin alert-green {
+  background-color: $color-lighter-green;
+  border: 2px solid $color-dark-green;
+}
+
+@mixin list-disc-product {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: #707070;
+  left: 0;
+  top: 10px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+// Woocommerce
+
+@mixin product-label {
+  font-family: $raleway-family;
+  color: #707070;
+  font-size: 16px;
+  font-weight: 700;
+}

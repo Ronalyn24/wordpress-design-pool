@@ -1,0 +1,68 @@
+ 
+.events-lists {
+  
+  &--past {
+    margin: 7rem auto 4rem;
+    
+    .aw-headline {
+      margin-bottom: 3rem;
+    }
+  }
+  
+  &__item {
+    max-width: 1080px;
+    margin: 0 auto;
+    background: $color-white;
+    box-shadow: 13px 13px 26px #dbdbdb, -13px -13px 26px $color-white;
+    border: none;
+    border-radius: 30px;
+    padding: 3rem 2rem;
+    
+    @include responsive(phone-portrait){
+      padding: 2rem 1rem;
+    }
+    
+    &:not(:last-child){
+      margin-bottom: 5rem;
+      
+      @include responsive(phone-landscape){
+        margin-bottom: 2rem;
+      }
+    }
+    
+    .thumbnail-img {
+      @include responsive(phone-landscape){
+        max-width: 100%;
+      }
+    }
+    
+    .gen-btn {
+      min-width: 165px;
+      margin-top: 20px;
+    }
+  }
+  
+  .events-text {
+    
+    p:last-of-type {
+      margin-bottom: 5px;  
+    }
+    
+    a {
+      color: $color-violet;
+      border-bottom: 2px solid $color-light-violet;
+    }
+  }
+}
+
+.events-large-btn {
+  
+  .gen-btn {
+    padding: 0.9rem 3rem;
+    
+    @include responsive(phone-portrait){
+      padding: 0.9rem 1rem;
+      width: 100%;
+    }
+  } 
+}

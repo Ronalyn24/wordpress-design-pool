@@ -1,0 +1,247 @@
+// html.sidebar-opened {
+//   overflow-y: hidden;
+// }
+
+.aw-sidebar {
+  position: relative;
+  background-color: $color-white;
+  
+  @include responsive(tablet-portrait){
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 900;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .sidebar-opened & {
+    z-index: 9999;
+    transition: transform 0.3s;
+    transform: translateX(0);
+  }
+  
+  &__container {
+    max-width: 285px;
+    // padding-right: 3rem;
+    
+    @include responsive(tablet-portrait){
+      padding: 20px;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      height: 100%;
+    }
+
+    .did-scroll & {
+      position: fixed;
+      top: 92px;
+      max-width: 286px;
+      
+      @include responsive(very-small-desktop){
+        padding-right: 3rem;
+      }
+      
+      @include responsive(tablet-portrait){
+        position: inherit;
+        top: inherit;
+        left: inherit;
+        padding-right: 15px;
+      }
+    }
+    
+    .limit-fixed & {
+      position: absolute;
+      top: auto;
+      bottom: 175px;
+      left: 0;
+      
+      @include responsive(tablet-portrait){
+        position: inherit;
+        top: inherit;
+        bottom: inherit;
+        left: inherit;
+      }
+    }
+  }
+  
+  &__item {
+    margin-bottom: 2rem;
+    
+    .aw-headline {
+      
+      &__head-four {
+        font-family: $raleway-family;
+        font-size: 15px;
+        letter-spacing: .01em;
+        font-weight: bold;
+      }
+    }
+    
+    &--tag a {
+      background-color: #b4b4b4;
+      color: $color-white;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 10px;
+      margin: 0 3px 5px;
+      padding: 1px 10px;
+      display: inline-block;
+      border-radius: 50px;
+      
+      @include responsive(phone-portrait){
+        padding: 1px 12px;
+      }
+    }
+  }
+  
+  &__cat-list {
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    font-size: 13px;
+    color: $color-dark-grey-1;
+    
+    i {
+      font-size: 10px;
+      font-weight: bold;
+      top: -2px;
+      position: relative;
+      margin-right: 5px;
+    }
+  }
+}
+
+
+.mobile-sidebar-toggle {
+    display: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: -40px;
+    top: 20%;
+    margin: auto;
+    font-size: 17px;
+    line-height: 38px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    border-left-width: 0;
+    transition: 0.2s ease-in-out;
+    color: $color-black;
+    background-color: $color-white;
+    
+    @include responsive(tablet-portrait){
+      display: block;
+    }
+}
+
+
+.sidebar-overlay {
+  display: none;
+  
+  .sidebar-opened & {
+    display: block;
+    background: $color-black;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    min-height: 100vh;
+    opacity: .35;
+    transition: opacity 0.2s ease-in-out;
+  }
+}
+
+
+.sidebar-ads {
+  position: relative;
+  
+  &__image {
+    position: relative;
+    overflow: hidden;
+    padding-top: 65%;
+    
+    img {
+      @include object-fit-cover-center;
+      top: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+    }
+  }
+  
+  &__link {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__content {
+	position: relative;
+    z-index: 99;
+    background: #8dc3df;
+    color: #000;
+    padding: 20px 5px;
+    text-align: center;
+  }
+  
+  &__title {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: $raleway-family;
+  	font-weight: 600;
+  	letter-spacing: 1px;
+ 	margin-bottom: 3px;
+    
+    @include responsive(very-small-desktop){
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+  }
+  
+  &__text {
+	  font-size: 10.6px;
+	  letter-spacing: 0.5px;
+	  font-weight: 300;
+	  margin: 0;
+	  line-height: 15px;
+    
+    span {
+  		display: inline-block;
+    }
+    
+    .subs {
+      background: #fff;
+      border-radius: 30px;
+      padding: 7px 8px 10px;
+      width: 146px;
+      max-width: 100%;
+      letter-spacing: 0;
+      font-family: $arsenal-family;
+      line-height: 20px;
+      font-size: 18px;
+      margin: 15px auto 5px;
+      color: #707070;
+	  transition: 0.4s;
+		
+		&:hover {
+			background-color: #f4f4f5;
+			color: #000;
+		}
+    }
+  }
+  
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    @include object-fit-cover-center;
+  }
+}

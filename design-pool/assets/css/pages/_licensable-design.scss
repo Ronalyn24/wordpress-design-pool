@@ -1,0 +1,484 @@
+.aw-licensable-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  &__item {
+    width: 23.89%;
+    margin-bottom: 40px;
+    text-align: center;
+    
+    @media screen and (max-width: 1381px){
+      width: 23.3333%;
+    }
+    
+    @include responsive(tablet-landscape){
+      width: 30.333%;
+    }
+    
+    @include responsive(tablet-portrait){
+      width: 31%;
+    }
+    
+    @include responsive(phone-landscape){
+      width: 48%;
+      margin-bottom: 30px;
+    }
+  }
+  
+  .aw-title {
+    padding: 10px 0 15px;
+    margin: 0;
+    font-size: 15px;
+    font-family: $raleway-family;
+    
+    @include responsive(phone-portrait) {
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+  
+  .gen-btn {
+    border: 1px solid $color-light-grey-1;
+    background-color: transparent;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 20px;
+    @include transition(0.2s ease-in-out);
+    
+    &:hover {
+      background-color: $color-violet;
+      color: $color-white;
+    }
+    
+    @include responsive(phone-portrait) {
+      font-size: 11px;
+      padding: 4px 20px;;
+    }
+  }
+  
+  .post-thumbnail {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    
+    img {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: opacity 0.3s ease-in-out;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    
+    &__front {
+      position: relative;
+      opacity: 1;
+    }
+    
+    &__back {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      opacity: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
+    
+    &:hover {
+      
+      .post-thumbnail__front {
+        opacity: 0;
+      }
+      
+      .post-thumbnail__back {
+        opacity: 1;
+      }
+    }
+  }
+  
+  .no-post-found {
+    padding: 5rem 20px 10px;
+  }
+  
+  .aw-btn-ctner {
+    padding: 1rem 0 5rem;
+  }
+}
+
+.aw-licensable-wrap {
+  
+  .aw-woo-wrap {
+    
+    &__sidebar {
+      margin-top: 0;
+      padding: 0;
+      border-bottom: none;
+      
+      h4 {
+        text-transform: uppercase;
+        font-family: $raleway-family;
+        font-weight: 600;
+        font-size: 15px;
+      }
+    }
+  }
+  
+  .searchandfilter {
+    
+    > ul {
+      
+      > li {
+        display: block;
+        padding: 20px 20px;
+        border-bottom: 1px solid $color-light-grey-2;
+        font-size: 14px;
+        position: relative;
+        
+        .sf-count {
+          position: absolute;
+          right: 0;
+          top: 3px;
+        }
+        
+        li {
+          position: relative;
+          padding: 2px 2rem 2px 0;
+        }
+        
+        > ul:not(.children) li {
+          display: flex;
+        }
+      }
+    }
+    
+    .search-filter-reset {
+      border: 1px solid $color-violet;
+      background-color: $color-violet;
+      color: $color-white;
+      border-radius: 20px;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 12px 20px;
+      @include transition( all 0.2s ease-in);
+      
+      &:hover {
+        background-color: $color-black;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+/*===================================================
+* LICENSABLE SINGLE POST
+====================================================*/
+
+.aw-licensable-single-post {
+  
+  .aw-inner-main-content {
+    max-width: 100%;
+    padding: 4rem 2rem 5rem;
+    
+    @include responsive(phone-portrait){
+      padding: 3rem 20px;
+    }
+  }
+}
+
+.licensable-content {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-gap: 4%;
+  
+  @include responsive(desktop){
+    grid-template-columns: 5fr 3fr;
+  }
+  
+  @include responsive(small-desktop){
+    grid-template-columns: 3fr 3fr;
+  }
+  
+  @include responsive(tablet-portrait){
+    display: block;
+  }
+  
+  .heateor_sss_sharing_ul {
+    
+    span {
+      border: 2px solid #e7e7e7!important;
+      
+      a.heateor_sss_more:hover {
+        color: $color-white;
+      }
+      
+      svg {
+        width: 26px;
+        height: 26px;
+        margin: 0 auto;
+        position: relative;
+        top: 4px;
+        bottom: auto;
+      }
+    }
+  }
+}
+
+.licensable-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  @include responsive(tablet-portrait){
+    margin-bottom: 3rem;
+  }
+  
+  @include responsive(small-phone-landscape){
+    width: 100%;
+  }
+  
+  .magnifying-area {
+    width: 100%;
+    height: 100%;
+  }
+  
+  &__item {
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 auto;
+    width: 49%;
+    margin-bottom: 20px;
+    
+    @include responsive(phone-portrait){
+      width: 48%;
+    }
+    
+    img {
+      @include object-fit-cover-center;
+      cursor: grab;
+    }
+  }
+}
+
+
+.aw-post-meta {
+  margin: 5px 0 10px;
+  
+  p {
+    margin-bottom: 10px;
+    line-height: 23px;
+    
+    span {
+      font-size: 13px;
+    }
+  }
+  
+  &__cat,
+  &__tag {
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #141a1f;
+
+    &.plain-tag {
+      display: inline;
+      text-transform: none;
+      font-weight: normal;
+      font-size: inherit;
+      color: inherit;
+      margin-right: 0;
+    }
+    
+    &:last-child span {
+      display: none;
+    }
+  }
+}
+
+.aw-pagination {
+  margin: 3rem 0;
+  border-top: 1px solid #f4f4f4;
+  padding: 30px 0 0;
+  text-align: center;
+  
+  .aw-load-more {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .hide-load-more & {
+    display: none;
+  }
+  
+  &__numbers {
+    text-align: right;
+    
+    @include responsive(phone-portrait){
+      text-align: center;
+    }
+    
+    .page-numbers {
+      border: 1px solid #ccc;
+      padding: 7px 10px;
+      color: $color-dark-grey;
+      font-size: 15px;
+      font-weight: 700;
+      @include transition( all 0.2s ease-in);
+      
+      &.current,
+      &:hover {
+        background-color: $color-violet;
+        color: $color-white;
+      }
+      
+      &.dots {
+        border: none;
+        
+        &:hover {
+          background-color: transparent;
+          color: $color-dark-grey;
+        }
+      }
+    }
+  }
+}
+
+
+.patterns-icons {
+  
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    width: 108%;
+    left: -20px;
+    position: relative;
+    
+    @include responsive(small-desktop){
+      width: 100%;
+      left: 0;
+    }
+  }
+  
+  &__item {
+    padding: 0 20px;
+    flex: 0 0 auto;
+    width: 25%;
+    
+    @include responsive(med-desktop){
+      width: 33%;
+    }
+    
+    @include responsive(tablet-portrait){
+      width: 25%;
+    }
+    
+    @include responsive(small-phone-landscape){
+      width: 33%;
+    }
+    
+    @include responsive(phone-medium){
+      width: 50%;
+      margin-bottom: 15px;
+      padding: 0 5px;
+    }
+
+    &.special-padding {
+      padding: 0 10px; 
+    }
+  }
+  
+  &__link {
+    display: block;
+    cursor: pointer;
+    @include transition(.2s ease-in-out);
+    
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  
+  &__image {
+    height: 100px;
+    margin: auto;
+    display: block;
+    
+    @include responsive(med-desktop){
+      height: 75px;
+    }
+  }
+  
+  &__title {
+    margin: 10px 0 20px;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 15px;
+  }
+}
+
+
+.price-alert {
+  @include alert();
+  @include alert-yellow();
+  margin-bottom: 25px;
+}
+
+.downloadLinks {
+  padding-bottom: 1rem;
+  
+  &__link {
+    @include alert-green();
+    display: flex;
+    justify-content: space-between;
+    padding: 9px 20px;
+    border-radius: 20px;
+    
+    a {
+      color: #353b40;
+      font-weight: 500;
+    }
+    
+    i {
+      position: relative;
+      top: 4px;
+      font-size: 20px;
+      color: #397114;
+    }
+  }
+}
+
+.custom-color  {
+  .patterns-icons__link {
+    display: inline;
+  }
+}
+
+// We don't need the hover image on mobile
+.dp-grid-archive {
+  .licensable-gallery {
+    @include responsive(tablet-landscape){
+      display: none;
+    }
+  }
+}
+
+/*===================================================
+* DOWNLOAD NOTIFICATION
+====================================================*/  
+
+.download-notification {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  left: -9999px;
+}

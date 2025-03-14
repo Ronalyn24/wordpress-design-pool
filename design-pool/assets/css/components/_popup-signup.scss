@@ -1,0 +1,313 @@
+.popup-notice, .popup-notice-gs {
+  display: none;
+  position: absolute;
+  z-index: 99999;
+
+    .notice-popup-open & {
+      display: block;
+
+      @include responsive(phone-landscape){
+        display: none;
+      }
+    }
+
+    p {
+      font-size: 18px;
+    }
+    
+    &__content {
+      width: 95%;
+      border-radius: 30px;
+      overflow: hidden;
+      max-width: 625px;
+      z-index: 9999;
+      @include element-absolute-center;
+    }
+    
+    &__item {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0s ease-in;
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      background-color: rgba(0, 0, 0, 0.65);
+      z-index: 100000;
+
+      .notice-popup-open & {
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.2s ease-in;
+      }
+  }
+  
+  &__inner-ctn {
+    position: relative;
+    z-index: 999;
+    padding: 36px 45px 10px;
+    color: $color-white;
+
+    @include responsive(desktop) {
+      padding: 0 45px;
+    }
+    
+    .beinspired {
+      margin: 25px auto 18px;
+    }
+    
+    form {
+      max-width: 360px;
+      margin: 0 auto;
+      position: relative;
+      padding-bottom: 1rem;
+
+      @include responsive(desktop) {
+        padding-bottom: 0;
+      }
+      
+      .gfield_label {
+        font-weight: unset !important;
+      }
+      
+      .aw-checkbox {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+      }
+      
+      select {
+        background: $color-white $select-down-arrow 96% 49% / 15px 15px no-repeat !important;
+        appearance: none;
+      }
+      
+      .gfield-choice-input+label {
+        font-size: 11px;
+        margin-top: -3px;
+      }
+      
+      .gform_footer {
+        position: relative;
+        
+        input[type="submit"] {
+          position: absolute;
+          right: 0;
+          bottom: 38px;
+          background-color: $color-dark-violet !important;
+          color: $color-white;
+          border: none;
+          margin-bottom: 0 !important;
+          height: 45px;
+          padding: 0 20px;
+          font-weight: 600;
+          font-size: 14px;
+          cursor: pointer;
+          @include transition(.3s ease-in-out);
+          
+          &:hover {
+            background-color: $color-black !important;
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+  
+  &__images {
+    display: flex;
+    
+    img {
+      width: 25%;
+    }
+  }
+  
+  .bck-close {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    outline: 0;
+    background: transparent;
+    border: none;
+  
+    &:focus {
+      outline: 0;
+    }
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0.7rem;
+    line-height: 1;
+    outline: 0;
+    background-color: transparent;
+    color: $color-white;
+    border: none;
+    text-align: right;
+    cursor: pointer;
+    z-index: 99999;
+  
+    &:focus {
+      outline: 0;
+    }
+  
+    @include responsive(tablet-portrait){
+      top: 5px;
+    }
+  
+    i {
+      font-size: 26px;
+      font-weight: 200;
+    }
+  }
+
+  .gfield_required {
+    display: none !important;
+  }
+  
+  .bg-close {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    cursor: pointer;
+  }
+}
+
+.did-see-popup,
+.did-sign-up {
+  .popup-notice {
+    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+  }
+} 
+
+.popup-notice-gs {
+  height: 100%;
+  
+  .aw-headline {
+    font-family: $rollete-family;
+    text-align: center;
+    font-size: 5rem;
+    color: $color-violet;
+    margin-bottom: -5px;
+  }
+  
+  p {
+    font-weight: 500;
+  }
+
+  &__item {
+    overflow-y: scroll;
+  }
+  
+  &__content {
+    position: static !important;
+    transform: translate(0,0) !important;
+    max-width: 810px;
+    overflow: unset !important;
+    margin-top: 3rem;
+  }
+  
+  &__inner-ctn {
+    background-color: $color-light-grey;
+    color: $color-violet;
+    padding: 0;
+    display: flex;
+    border-radius: 15px;
+    
+    form {
+      max-width: 100%;
+      
+      .gform_footer {
+        margin-top: 0 !important;
+    
+        input[type="submit"] {
+          @include default-button;
+          background-color: $color-violet !important;
+          position: relative !important;
+          bottom: inherit !important;
+          padding: 0.6rem 2rem;
+        }
+      }
+    }
+  }
+  
+  &__col-2:first-child {
+    position: relative;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    
+    .large-img {
+      @include object-fit-cover-center;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+  }
+  
+  &__col-2:last-child {
+    padding: 35px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  
+  .close-button {
+    color: $color-violet;
+  }
+  
+  .gfield {
+    
+    label {
+      display: none !important;
+    }
+    
+    input {
+      margin-bottom: 10px !important;
+      border: 1px solid #dedede;
+      border-radius: 3px;
+      color: $color-violet !important;
+      
+      &::-webkit-input-placeholder {
+        color: $color-violet !important;
+        font-weight: 500;
+      }
+    }
+  }
+  
+  .gform_wrapper.gravity-theme .gform_fields {
+    grid-row-gap: 0;
+  }
+  
+  .aw-get-sample-address {
+    
+    .ginput_complex {
+      display: block !important;
+    }
+  
+    span label {
+      display: none !important;
+    }
+  }
+  
+  .gf_clear.gf_clear_complex {
+    display: none;
+  }
+}
+
+.did-see-popup-gs,
+.did-sign-up-gs {
+  .popup-notice-gs {
+    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+  }
+} 

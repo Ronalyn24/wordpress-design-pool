@@ -1,0 +1,220 @@
+div {
+    display: block;
+    width: 100%;
+}
+
+.aw-section {
+    position: relative;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    @include justify-center;
+    
+    @include responsive(tablet-portrait){
+        padding: 2rem 2rem;  
+    }
+    
+    @include responsive(phone-landscape){
+        padding: 3rem 2rem;
+    }
+    
+    @include responsive(phone-portrait){
+        padding: 3rem 20px;
+    }
+    
+    &.aw-sec-1 {
+        
+        @include responsive(phone-portrait){
+            padding-top: 2rem !important;
+        }
+    }
+    
+    &.no-padding {
+        padding: 0;
+    }
+    
+    &.no-pt-pb {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
+    &.no-pl-pr {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    
+    &.no-pb {
+       padding-bottom: 0; 
+    }
+}
+
+.aw-row {
+    width: $default-width;
+    max-width: $default-max-width;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+
+[class^="col-"]:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.aw-row-columns {
+    @include flex;
+    @include justify-space-between;
+    width: 100%;
+    flex-direction: row;  
+    
+    @include responsive(phone-landscape){
+        flex-direction: column;
+    }
+    
+
+    .col-1-of-2 {
+        width: calc((100% - #{$spacing-horizontal}) / 2);       
+        
+        @include responsive(phone-landscape){
+            width: 100%;
+        }
+    }
+
+    .col-1-of-3 {
+        width: calc((100% - 2 * #{$spacing-horizontal}) / 3);
+        
+        @include responsive(phone-landscape){
+            width: 100%;
+            margin: 0 0 2rem;
+        }
+    }
+
+    .col-2-of-3 {
+        width: calc(2 * ((100% - 2 * #{$spacing-horizontal}) / 3) + #{$spacing-horizontal});
+        
+        @include responsive(phone-landscape){
+            width: 100%;
+            margin: 0 0 2rem;
+        }
+    
+    }
+
+    .col-1-of-4 {
+        width: calc((100% - 3 * #{$spacing-horizontal}) / 4);
+    }
+
+    .col-2-of-4 {
+        width: calc(2 * ((100% - 3 * #{$spacing-horizontal}) / 4) + #{$spacing-horizontal});
+    }
+
+    .col-3-of-4 {
+        width: calc(3 * ((100% - 3 * #{$spacing-horizontal}) / 4) + 2 * #{$spacing-horizontal});
+    }
+    
+    .col-1-of-5 {
+        width: 20%;
+        padding: 0 20px;
+        
+        @include responsive(tablet-portrait){
+            width: 30%;
+        }
+        
+        @include responsive(phone-landscape){
+            width: 40%;
+        }
+        
+        @include responsive(small-phone-landscape){
+            width: 50%;
+        }
+        
+        @include responsive(phone-medium){
+            width: 70%;
+        }
+    }
+}
+
+
+.grid {
+    display: grid;
+    gap: 2rem;
+    
+    &--2 {
+        grid-template-columns: 1fr 1fr;
+        
+        @include responsive(phone-landscape){
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    &--4 {
+        grid-template-columns: 1fr;
+        gap: 1.32rem;
+        align-items: center;
+        justify-content: center;
+        
+        @media screen and (min-width: 479px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        @media screen and (min-width: 767px) {
+            grid-template-columns: repeat(2, 40%);
+        }
+        
+        @media screen and (min-width: 980px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        .grid__item {
+            padding: 0 !important;
+        }
+    }
+    
+    
+    &__item {
+        @include responsive(phone-landscape){
+            padding: 0 20px;
+        }
+    }
+    
+    &--reverse {
+        .grid__item.one {
+            order: 1;
+            
+            @media screen and (min-width: 768px) {
+                order: 2;
+            }
+        }
+        
+        .grid__item.two {
+            order: 2;
+                        
+            @media screen and (min-width: 768px) {
+                order: 1;
+            }
+        }
+    }
+    
+    
+    &__img-ctner {
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding-top: 100%;
+    }
+    
+    &__content {
+        
+        .aw-headline__head-four {
+            margin-bottom: 0.3rem;
+        }
+    }
+}

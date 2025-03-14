@@ -1,0 +1,271 @@
+.aw-inner-main-content {
+  width: 100%;
+  max-width: 1336px;
+  margin: 0 auto;
+  display: block;
+  padding: 3rem 3rem 5rem;
+  
+  @include responsive(tablet-portrait){
+    padding: 3rem 30px;
+  }
+  
+  @include responsive(phone-portrait){
+    padding: 3rem 20px;
+  }
+  
+  .aw-single-post & {
+    
+    @include responsive(tablet-portrait){
+      padding-bottom: 6rem;
+    }
+  }
+}
+
+
+.archive-content, .post-content {
+  display: grid;
+  grid-template-columns: 3.6fr 1fr;
+  grid-gap: 2%;
+  
+  @include responsive(tablet-portrait){
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+  
+  .post-thumbnail {
+    margin-bottom: 1rem;
+    display: block;
+    
+    img {
+      width: 100%;
+    }
+  }
+  
+  .aw-article {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid $color-light-grey-1;
+    padding-bottom: 1rem;
+    position: relative;
+    
+    .aw-headline__head-two {
+      display: flex;
+      padding-bottom: 0;
+      
+      a {
+        padding-top: 10px;
+        font-weight: 600;
+        font-size: 24px;
+        letter-spacing: 1px;
+      }
+    }
+    
+    
+    .post-meta {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0 0 1.4rem;
+    }
+    
+    .gen-btn {
+      position: absolute;
+      right: 0;
+      bottom: 25px;
+      
+      @include responsive(phone-landscape){
+        position: relative;
+        bottom: 0;
+      }
+    }
+    
+    .post-meta-item {
+      display: flex;
+      @include align-items-center;
+      margin: 0 5px 0 0;
+      font-size: 14px;
+      
+      li {
+        margin-right: 10px;
+        text-transform: uppercase;
+      }
+    
+      .info {
+        margin-right: 10px;
+      }
+    
+      i {
+        margin: 0 10px;
+        font-size: 13px;
+      }
+      
+      &--author {
+        i {
+          margin-left: 0;
+        }
+      }
+      
+      // li:first-of-type span {
+      //   display: none;
+      // }
+      
+      &--cat {
+        li:first-of-type span {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+.back-to-blog {
+  display: inline-block;
+  
+  &__top {
+    margin-bottom: 1rem;
+  }
+  
+  i {
+    font-size: 12px;
+  }
+}
+
+
+.aw-time {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  
+  &__date {
+    background: $color-light-grey;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  &__month {
+    background-color: $color-black;
+    color: $color-white;
+    font-size: 13px;
+    text-align: center;
+    padding: 4px 2px;
+  }
+}
+
+
+.post-pagination {
+  display: flex;
+  @include justify-space-between;
+  
+  a {
+    margin-right: 20px;
+  }
+}
+
+.page-template-page-blog,
+.archive.category {
+  .post-meta .post-meta-item--cat {
+    li {
+      margin-right: 5px;
+    }
+  }
+}
+
+.post-meta-head {
+  display: flex;
+  align-items: center;
+  
+  .post-date, 
+  ul.post-meta-item li {
+    font-size: 12px;
+  }
+  
+  .post-date {
+    letter-spacing: -1px;
+  }
+}
+
+
+// Blog page
+
+.page-template-page-blog, .blog {
+  
+  .main-content__posts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    
+    @media screen and (min-width: 600px){
+      gap: 0rem 2rem;
+    }
+    
+    @media screen and (min-width: 1240px){
+      gap: 2rem;
+    }
+    
+    ul {
+      list-style: none !important;
+      list-style-position: inherit !important;
+      
+      li {
+        display: flex;
+        align-items: center;
+      }
+      
+      .aw-disc {
+        font-size: 18px;
+        padding: 0 5px;
+      }
+    }
+    
+    article {
+      width: 100%;
+      border-bottom: none;
+      margin-bottom: 0;
+
+      @media screen and (min-width: 600px){
+        width: 47%;
+      }
+      
+      @media screen and (min-width: 1240px){
+        width: 30.677%;
+      }
+      
+      .post-meta-item--author {
+        font-family: $arsenal-family !important;
+        font-size: 20px !important;
+      }
+      
+      p.aw-excerpt {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  
+  .post-thumbnail {
+    /* aspect-ratio: 4 / 5; */
+    position: relative;
+    padding-top: 100%;
+    
+    @media screen and (min-width: 600px){
+      padding-top: 120%;
+    }
+    
+    @media screen and (min-width: 1240px){
+      padding-top: 125%;
+    }
+    
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

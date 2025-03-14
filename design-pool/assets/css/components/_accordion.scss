@@ -1,0 +1,53 @@
+.accordion-container {
+  position: relative;
+  padding: 2rem 0 0;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.acc-item {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: rgba(156, 164, 200, 0.17);
+  border-radius: 5px;
+  overflow: hidden;
+
+  > .acc-btn {
+      display: block;
+      padding: 10px 50px 10px 15px;
+      text-decoration: none;
+      font-weight: 600;
+      color: $color-black;
+      width: 100%;
+      border: none;
+      outline: none;
+      @include transition(.2s ease-in-out);
+      text-align: left;
+      cursor: pointer;
+      background: transparent;
+
+        @include responsive(tablet-portrait){
+            font-size: 16px;
+        }
+
+      i {
+          position: absolute;
+          right: 20px;
+          top: 15px;
+      }
+  }
+  
+  &:nth-child(2n) {
+    
+    > .acc-btn {
+      background-color: $color-white;
+    }
+  }
+
+  .content {
+    display: none;
+    padding: 25px 5% 15px 5%;
+    background-color: $color-white;
+  }
+}

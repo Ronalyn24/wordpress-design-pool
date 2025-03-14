@@ -1,0 +1,317 @@
+html.show-popup-form {
+  overflow-y: hidden;
+}
+
+.popup-form-wrap {
+  position: relative;
+  z-index: 9999;
+  
+  
+  .gform_wrapper {
+    position: relative;
+    z-index: 9999;
+  }
+  
+  &__item {
+    width: 300px;
+    height: 300px;
+    top: 0;
+    left: 0;
+    @include justify-center;
+    @include align-content-center;
+    background-color: rgba(0, 0, 0, 0.80);
+    position: relative;
+    z-index: 99999;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0s ease-in;
+    overflow-y: scroll; 
+    
+    &.dp-current {
+      overflow-y: hidden;
+      
+      .show-popup-form & {
+        @include show-lightbox;
+        width: 100%;
+        height: 100vh;
+      }
+    }
+    
+    h1 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      font-family: $raleway-family;
+    }
+    
+    p {
+      font-size: 14px;
+      margin-bottom: 0;
+      letter-spacing: 1px;
+    }
+  }
+   
+  &__inner-wrap {
+    display: flex;
+    overflow-y: scroll;
+    z-index: -1;
+  }
+  
+  &__content {
+    display: table;
+    position: relative;
+    width: 95%;
+    max-width: 800px;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    margin: 2% auto;
+    padding: 40px 30px 60px 30px;
+    z-index: 99999;
+    
+    @include responsive(phone-portrait){
+      padding: 40px 20px 60px;
+    }
+
+    .gform_wrapper {
+
+      form {
+        position: relative;
+      }
+      
+      label.gfield_label, .gform-field-label {
+        font-size: 15px !important;
+        font-weight: 500 !important;
+        color: $color-black;
+      }
+      
+      input, select {
+        height: 45px;
+      }
+      
+      input, select, textarea {
+        background-color: $color-white;
+        font-size: 18px !important;
+        color: $color-violet;
+        font-weight: 400 !important;
+        border: 1px solid rgba(0,0,0,0.09);
+        
+        @include responsive(phone-portrai){
+          font-size: 16px !important;
+        }
+      }
+    
+      .gfield--type-fileupload {
+        display: flex;
+        position: absolute;
+        top: auto;
+        bottom: 16px;
+        right: 0;
+        width: auto;
+        align-items: end;
+        
+        .gfield_label {
+          margin-bottom: 0;
+        }
+ 
+        .gform_fileupload_rules {
+          background-color: transparent;
+          border: none;
+          padding: 0 !important;
+          margin: 0 0 10px !important;
+        }
+      }
+
+      select {
+        background: $color-white url("/wp-content/uploads/2023/05/drop-down-triangle-edited1.png") 96% 49%/18px 18px no-repeat !important;
+        appearance: none;
+      }
+      
+      .gfield_description {
+        font-size: 12px;
+        color: #1d1d1d;
+        padding: 10px 20px 20px !important;
+        background-color: $color-lighter-yellow;
+        border: 2px solid $color-dark-yellow;
+        border-radius: 19px;
+        margin: 0.6rem 0;
+        
+        @include responsive(phone-portrait){
+          line-height: 22px !important;
+        }
+      }
+      
+      input[type="submit"] {
+        background-color: $color-violet;
+        color: $color-white;
+        padding: 0.6rem 1.6rem;
+        border-radius: 40px;
+        display: inline-block;
+        text-align: center;
+        @include transition( 0.3s ease-in-out);
+        cursor: pointer;
+        line-height: initial !important;
+        position: relative;
+        z-index: 9999;        
+        @include responsive(phone-portrait){
+          width: 100%;
+        }
+        
+        &:hover {
+          background-color: $color-black;
+          color: $color-white;
+        }
+      }
+      
+      .gform_footer {
+        margin: 0 !important;
+        padding: 13px 0 !important;
+        
+        @include responsive(phone-portrait){
+          padding: 12px 0 40px !important;
+        }
+      }
+      
+      &.gravity-theme {
+        
+        .gform_fields {
+          grid-column-gap: 4%;
+          
+          @include responsive(phone-landscape){
+            grid-row-gap: 10px;
+          }
+        }
+        
+        .ginput_container_address {
+          margin-left: 0;
+          margin-right: 0;
+          
+          span {
+            padding-left: 0;
+            
+            @media screen and (max-width: 640px){
+              padding-left: 0 !important;
+              padding-right: 0 !important;
+            }
+          }
+        }
+      }
+    }
+    
+    
+    .ginput_complex {
+      
+      .address_line_1, .address_line_2 {
+        padding-right: 0 !important;
+      } 
+      
+      .address_state {
+        position: relative;
+        top: -8px;
+        padding: 0 0 0 3% !important;
+      }
+    }
+  }
+  
+  .popup-form-close {
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    bordeR: none;
+    font-size: 30px;
+    z-index: 99999;
+    
+    @include responsive(tablet-portrait){
+      right: 22px;
+      top: 10px;
+    }
+  }
+  
+  .back-form-close {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    z-index: -1;
+  }
+  
+  // GFROM
+  
+  textarea {
+    height: 130px !important;
+  } 
+  
+  .gfield_required {
+    display: none !important;
+  }
+  
+  
+  // Custom fileupload
+  
+  .custom-file-upload {
+    position: absolute;
+    z-index: 99;
+    bottom: -50px;
+    
+    .gfield_label {
+      margin-bottom: 0 !important;
+    }
+    
+    &__wrap {
+      display: flex;
+      position: absolute;
+      top: auto;
+      bottom: 30px;
+      right: 0;
+      width: auto;
+      align-items: end;
+      justify-content: end;
+      padding-bottom: 35px;
+      width: 100%;
+      
+      @include responsive(phone-portrait){
+        bottom: 0;
+      }
+    }
+    
+    &__item {
+      width: 70%;
+      text-align: right;
+    
+      &:last-child {
+        width: 40px;
+      
+        img {
+          margin-left: auto;
+          width: 25px;
+          height: 46px;
+        }
+      }
+    }
+    
+    .file-upload-input {
+      width: 100% !important;
+      height: 100% !important;
+      opacity: 0;
+      cursor: pointer;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    
+    .file-selected-name {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      top: auto;
+      font-size: 17px;
+      line-height: 1;
+    }
+  }
+}

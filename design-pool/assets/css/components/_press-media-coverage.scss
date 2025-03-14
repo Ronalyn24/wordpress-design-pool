@@ -1,0 +1,176 @@
+.media-coverage {
+  
+  @include responsive(phone-landscape){
+    padding: 3rem 2rem;
+  }
+  
+  @include responsive(phone-portrait){
+    padding: 3rem 1.3rem;
+    margin-bottom: 3rem;
+  }
+  
+  &__press-release {
+    margin-bottom: 5rem;
+    
+    @include responsive(phone-portrait){
+      margin-bottom: 3rem;
+    }
+  }
+  
+  &__services:first-of-type {
+    margin-top: 0;
+  }
+  
+  &__item {
+    
+    &:not(:last-child){
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #dedede;
+      padding-bottom: 2rem;
+    }
+  }
+  
+  &__inner-col {
+    
+      .d-flex & {
+        width: 90%;
+        
+        @include responsive(tablet-portrait){
+          width: 60%;
+        }
+    }
+    
+    &.image-object-fit {
+      
+      .d-flex & {
+        width: 30%;
+        height: 220px;
+        padding-left: 2.3rem;
+        
+        @include responsive(tablet-portrait){
+          width: 50%;
+        }
+        
+        @include responsive(small-phone-landscape){
+          padding-left: 0;
+          margin-bottom: 2rem;
+          height: auto;
+        }
+        
+        
+        .media-coverage__services & {
+          padding-left: 0;
+          padding-right: 2.3rem;
+          width: 50%;
+          height: 320px;
+          
+          @include responsive(phone-landscape){
+            padding-right: 0;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+  
+  &__date {
+    font-size: 14px;
+  }
+  
+  .aw-headline {
+    font-weight: 500;
+    
+    &__head-two {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    
+    &__head-four {
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 500;
+      margin-bottom: 5px;
+      
+      @include responsive(phone-portrait){
+        font-size: 16px;
+      }
+    }
+  }
+  
+  .aw-content {
+    
+    p:last-of-type {
+      margin-bottom: 5px;
+    }
+  }
+  
+  .serv-cntn-item {
+    
+    li, p {
+      line-height: 24px;
+      margin-bottom: 5px;
+    }
+    
+    &__note {
+      padding-top: 15px;
+
+      h4, p {
+        color: #d60505;
+      }
+      
+      p {
+        font-size: 15px;
+      }
+      
+      .aw-headline {
+        font-size: 16px;
+        float: left;
+        margin: 1px 5px 0 0;
+      }
+    }
+  }
+}
+
+
+
+
+// Services Cards
+
+.serv-cntn-item {
+  margin-bottom: 2rem;
+  
+  &--bottom-content {
+    margin-bottom: 0 !important;
+  }
+  
+  .lists-unorder:last-child {
+    margin-bottom: 0;
+  }
+  
+  .aw-headline {
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: 600;
+    margin-bottom: 7px;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  &__bullet-points {
+    margin-bottom: 20px;
+    
+    .lists-unorder {
+      padding-left: 15px;
+      
+      li {
+        padding-left: 10px;
+        
+        @include responsive(phone-portrait){
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

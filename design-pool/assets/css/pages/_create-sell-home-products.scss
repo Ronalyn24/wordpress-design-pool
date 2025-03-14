@@ -1,0 +1,22 @@
+.create-sell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  
+  @include responsive(phone-portrait){
+    flex-direction: column;
+  }
+  
+  &__image {
+    width: 100%;
+    max-width: 185px;
+  }
+  
+  i {
+    color: $color-black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 2rem 2rem 2.2rem;
+  }
+}

@@ -1,0 +1,183 @@
+.aw-footer {
+  color: $color-grey;
+  font-family: $raleway-family;
+  font-size: 14px;
+  font-weight: 300;
+  padding-bottom: 0 !important;
+  
+  .aw-row-columns {
+    @include flex-wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+    
+    .col-1-of-3 {
+      @include responsive(tablet-portrait){
+        width: 100%;
+      }
+    }
+  }
+  
+  .aw-headline {
+    color: $color-white;
+    max-width: 400px;
+  }
+  
+  ul li {
+    margin-bottom: 5px;
+  }
+  
+  .ft-menus {
+    display: flex;
+    @include align-content-between;
+    
+    @include responsive(tablet-portrait){
+      width: 50% !important;
+      padding-top: 2rem;
+    }
+    
+    @include responsive(phone-landscape){
+      width: 100% !important;
+    }
+    
+    @include responsive(phone-portrait){
+      //flex-direction: column;
+      margin-bottom: 0 !important;
+    }
+  }
+  
+  &__row-last {
+    display: flex !important;
+    @include justify-start;
+    @include align-items-center;
+    border-top: 1px solid #727272;
+    padding: 2.3rem 0;
+    margin-top: 3rem !important;
+    
+    @include responsive(phone-landscape){
+      flex-direction: column;
+    }
+  }
+  
+  &__bottom-menu {
+    display: flex;
+    
+    @include responsive(phone-landscape){
+      @include justify-center;
+    }
+    
+    li {
+      margin-right: 20px;
+    }
+    
+    &--copyright {
+      flex-wrap: wrap;
+    }
+    
+    &--social-media {
+      margin-left: auto;
+      
+      @include responsive(phone-landscape){
+        margin-left: initial;
+        margin-top: 25px;
+        padding-right: 22px;
+      }
+      
+      li {
+        margin: 0 0 0 20px;
+        
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+      
+       a {
+        display: inline-block;
+        background: $color-violet;
+        width: 40px;
+        height: 40px;
+        line-height: 2;
+        text-align: center;
+        color: $color-white;
+        font-size: 20px;
+      }
+    }
+  }
+  
+  &__ft-menus-ctner {
+    margin-bottom: 2rem;
+    
+    @include responsive(phone-landscape){
+      margin-bottom: 0;
+    }
+
+    @include responsive(phone-portrait) {
+      margin-bottom: 2rem;
+    }
+    
+    &:first-child {
+      padding-right: 2rem;
+
+      @include responsive(phone-portrait) {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+
+// Footer subscribe form
+
+.footer-subs {
+  
+  form {
+    position: relative;
+    max-width: 315px;
+    width: 100%;
+  }
+  
+  .ft-subscribe {
+    position: relative;
+    
+    input[type="email"] {
+      width: 100% !important;
+      padding: 0 15px !important;
+      height: 41px;
+      border: none;
+      border-radius: 40px;
+    }
+  }
+  
+  .gform_validation_error {
+    
+    .gform_footer {
+      bottom: 56px;
+    }
+  }
+  
+  
+  .gform_footer {
+    position: absolute;
+    right: 0;
+    border: none;
+    bottom: 0;
+    top: auto;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: auto;
+    @include justify-end;
+    width: 100px;
+    border-radius: 0 18px 18px 0;
+    overflow: hidden;
+    
+    input[type="submit"] {
+      cursor: pointer;
+      border-radius: 0;
+      background-color: $color-violet;
+      color: $color-white;
+      padding: 0 1rem;
+      margin: 0 !important;
+      border: none;
+      height: 41px;
+    }
+  }
+}

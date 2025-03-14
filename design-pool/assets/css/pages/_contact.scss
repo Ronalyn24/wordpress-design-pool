@@ -1,0 +1,29 @@
+.aw-contact-infos {
+  
+  li {
+    i {
+      font-size: 18px;
+      margin-right: 10px;
+      color: $color-light-violet-1;
+    }
+    
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  
+  .fa-envelope {
+    position: relative;
+    top: 2px;
+  }
+}
+
+
+.aw-contact-details,
+.aw-contact-infos {
+  
+  .aw-headline__head-three {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,42 @@
+.aw-serv-banner-links {
+  padding: 2rem 3rem 0;
+  @include flex-wrap;
+  @include justify-space-between;
+  
+  @include responsive(tablet-portrait){
+    @include justify-start;
+  }
+  
+  @include responsive(phone-landscape){
+    padding: 1rem 2rem 0;
+  }
+  
+  @include responsive(small-phone-landscape){
+    padding: 0 2rem 0;
+  }
+  
+  @include responsive(phone-portrait){
+    padding: 0 20px 0;
+  }
+  
+  .aw-headline {
+    margin-bottom: 0;
+    padding: 10px 15px;
+    
+    @include responsive(very-small-desktop){
+      font-size: 20px;
+    }
+    
+    
+    a {
+      color: $color-violet;
+      border-bottom: 2px solid $color-violet;
+      @include transition(.5s ease-in-out);
+      
+      &:hover {
+        color: $color-light-violet;
+        border-color: $color-light-violet;
+      }
+    }
+  }
+}
