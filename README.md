@@ -27,13 +27,13 @@ Design Pool is a curated digital library of unique, trend-forward patterns desig
 
 **Flickity Slider:** Implemented smooth, touch-friendly sliders using the Flickity plugin.
 
-**JavaScript Enhancements:** Added various JavaScript functionalities to improve UX.
+**JavaScript Enhancements:** Added various JavaScript functionalities for interactivity.
 
 **Responsive Images:** Ensured all images are optimized and responsive.
 
 **Contact Form:** Integrated Gravity Forms for a seamless contact experience.
 
-**Web Accessibility:** Enhanced accessibility by following best practices, ensuring compatibility with screen readers and providing proper contrast, keyboard navigation, and ARIA attributes.
+**Web Accessibility:** Enhanced accessibility by following best practices and ARIA attributes.
 
 **SEO Optimization:** Implemented SEO best practices using Yoast SEO.
 
