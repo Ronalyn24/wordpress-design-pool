@@ -1,9 +1,10 @@
 # wordpress-design-pool
 Wordpress custom template from scratch
 
-Design Pool Website
+# Design Pool Website
 
 Design Pool is a curated digital library of unique, trend-forward patterns designed for commercial and residential interiors. This project involved building a fully responsive WordPress site with custom features, ensuring a smooth user experience and easy content management.
+
 **Live Site:** [Design Pool Patterns](https://designpoolpatterns.com/)
 
 # 🚀 Key Features
